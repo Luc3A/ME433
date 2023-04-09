@@ -26,11 +26,11 @@ class Plotter:
         self.ax = ax
         self.maxt = 250
         self.tdata = [0]
-        self.ydata = [3.3/2]
+        self.ydata = [10]
         self.line = Line2D(self.tdata, self.ydata)
 
         self.ax.add_line(self.line)
-        self.ax.set_ylim(0, 3.3)
+        self.ax.set_ylim(-3.3, 3.3)
         self.ax.set_xlim(0, self.maxt)
 
     def update(self, y):
@@ -61,8 +61,8 @@ def serial_getter():
             break
         yield line
 
-if len(sys.argv) < 2:
-    raise Exception("Ruh roh..no port specified!")
+#if len(sys.argv) < 2:
+    #raise Exception("Ruh roh..no port specified!")
 
 ser = serial.Serial("COM5", 230400, timeout=1)
 
@@ -74,6 +74,6 @@ ani = animation.FuncAnimation(fig, plotter.update, serial_getter, interval=1,
 
 ax.set_xlabel("Samples")
 ax.set_ylabel("Voltage (V)")
-fig.canvas.manager.set_window_title('Plot Voltage Data [0-3.3V]')
+fig.canvas.manager.set_window_title('Plot Voltage Data [0-10]')
 fig.tight_layout()
 plt.show()
