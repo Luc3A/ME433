@@ -12,7 +12,7 @@ int main(void) {
 	// char array for the raw data
     unsigned char d[14];
 	// floats to store the data
-    float ax, ay, az, gx, gy, gz;
+    float ax, ay, az, gx, gy, gz, temp;
 	
 	// read whoami
     unsigned char who;
@@ -31,20 +31,43 @@ int main(void) {
     
 	// wait to print until you get a newline
     NU32DIP_ReadUART1(m,100);
+    sprintf(m, "0x%X\r\n", who);
+    NU32DIP_WriteUART1(m);
+    // Write to PWR_MGMT register
+    // PWR_MGMT = 0x6B
+    write_byte_I2C1(0x68, 0x6B, 0x00);
 
+
+    
+    // Turn on accelerometer
+    // Write to ACCEL_CONFIG
+    // ACCEL_CONFIG = 0x1C
+    write_byte_I2C1(0x68, 0x1C, 0x00);
+    // Set sensitivity to +- 2g
+    
+    // Turn on gyroscope
+    write_byte_I2C1(0x68, 0x1B, 0x0C);
+    
     while (1) {
 		// use core timer for exactly 100Hz loop
         _CP0_SET_COUNT(0);
         blink(1, 5);
 
         // read IMU
+        // Burst read reads all acceleration, gyroscope, and temperature data
         burst_read_mpu6050(d);
         
 		// convert data
         ax = conv_xXL(d);
-        
+        ay = conv_yXL(d);
+        az = conv_zXL(d);
+        gx = conv_xG(d);
+        gy = conv_yG(d);
+        gz = conv_zG(d);
+        temp = conv_temp(d);
         // print out the data
         sprintf(m,"%f\r\n", ax);
+        //sprintf(m,"%f  %f  %f  %f  %f  %f  %f\r\n", ax, ay, az, gx, gy, gz, temp);
         NU32DIP_WriteUART1(m);
 
         while (_CP0_GET_COUNT() < 48000000 / 2 / 100) {
