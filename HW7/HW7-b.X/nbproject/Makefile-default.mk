@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=../template_hw_7.c ../../i2c_master_noint.c ../../i2c_master_noint.h ../../mpu6050.c ../../mpu6050.h ../../nu32dip.c ../../nu32dip.h
+SOURCEFILES_QUOTED_IF_SPACED=../template_hw_7.c ../../mpu6050.c ../nu32dip.c ../i2c_master_noint.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1472/template_hw_7.o ${OBJECTDIR}/_ext/43898991/i2c_master_noint.o ${OBJECTDIR}/_ext/43898991/i2c_master_noint.o ${OBJECTDIR}/_ext/43898991/mpu6050.o ${OBJECTDIR}/_ext/43898991/mpu6050.o ${OBJECTDIR}/_ext/43898991/nu32dip.o ${OBJECTDIR}/_ext/43898991/nu32dip.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1472/template_hw_7.o.d ${OBJECTDIR}/_ext/43898991/i2c_master_noint.o.d ${OBJECTDIR}/_ext/43898991/i2c_master_noint.o.d ${OBJECTDIR}/_ext/43898991/mpu6050.o.d ${OBJECTDIR}/_ext/43898991/mpu6050.o.d ${OBJECTDIR}/_ext/43898991/nu32dip.o.d ${OBJECTDIR}/_ext/43898991/nu32dip.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1472/template_hw_7.o ${OBJECTDIR}/_ext/43898991/mpu6050.o ${OBJECTDIR}/_ext/1472/nu32dip.o ${OBJECTDIR}/_ext/1472/i2c_master_noint.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1472/template_hw_7.o.d ${OBJECTDIR}/_ext/43898991/mpu6050.o.d ${OBJECTDIR}/_ext/1472/nu32dip.o.d ${OBJECTDIR}/_ext/1472/i2c_master_noint.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/1472/template_hw_7.o ${OBJECTDIR}/_ext/43898991/i2c_master_noint.o ${OBJECTDIR}/_ext/43898991/i2c_master_noint.o ${OBJECTDIR}/_ext/43898991/mpu6050.o ${OBJECTDIR}/_ext/43898991/mpu6050.o ${OBJECTDIR}/_ext/43898991/nu32dip.o ${OBJECTDIR}/_ext/43898991/nu32dip.o
+OBJECTFILES=${OBJECTDIR}/_ext/1472/template_hw_7.o ${OBJECTDIR}/_ext/43898991/mpu6050.o ${OBJECTDIR}/_ext/1472/nu32dip.o ${OBJECTDIR}/_ext/1472/i2c_master_noint.o
 
 # Source Files
-SOURCEFILES=../template_hw_7.c ../../i2c_master_noint.c ../../i2c_master_noint.h ../../mpu6050.c ../../mpu6050.h ../../nu32dip.c ../../nu32dip.h
+SOURCEFILES=../template_hw_7.c ../../mpu6050.c ../nu32dip.c ../i2c_master_noint.c
 
 
 
@@ -127,41 +127,23 @@ ${OBJECTDIR}/_ext/1472/template_hw_7.o: ../template_hw_7.c  .generated_files/fla
 	@${RM} ${OBJECTDIR}/_ext/1472/template_hw_7.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/_ext/1472/template_hw_7.o.d" -o ${OBJECTDIR}/_ext/1472/template_hw_7.o ../template_hw_7.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/43898991/i2c_master_noint.o: ../../i2c_master_noint.c  .generated_files/flags/default/913f3bc0301d0c9482f07dfd0d3cf8a11f573e53 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/_ext/43898991" 
-	@${RM} ${OBJECTDIR}/_ext/43898991/i2c_master_noint.o.d 
-	@${RM} ${OBJECTDIR}/_ext/43898991/i2c_master_noint.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/_ext/43898991/i2c_master_noint.o.d" -o ${OBJECTDIR}/_ext/43898991/i2c_master_noint.o ../../i2c_master_noint.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
-	
-${OBJECTDIR}/_ext/43898991/i2c_master_noint.o: ../../i2c_master_noint.h  .generated_files/flags/default/e6142cb1abf97a4a4508db8b31a125fb5e88ad8 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/_ext/43898991" 
-	@${RM} ${OBJECTDIR}/_ext/43898991/i2c_master_noint.o.d 
-	@${RM} ${OBJECTDIR}/_ext/43898991/i2c_master_noint.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/_ext/43898991/i2c_master_noint.o.d" -o ${OBJECTDIR}/_ext/43898991/i2c_master_noint.o ../../i2c_master_noint.h    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
-	
 ${OBJECTDIR}/_ext/43898991/mpu6050.o: ../../mpu6050.c  .generated_files/flags/default/c4888a102f30cdbbe917404e61c059614c03a3d8 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/_ext/43898991" 
 	@${RM} ${OBJECTDIR}/_ext/43898991/mpu6050.o.d 
 	@${RM} ${OBJECTDIR}/_ext/43898991/mpu6050.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/_ext/43898991/mpu6050.o.d" -o ${OBJECTDIR}/_ext/43898991/mpu6050.o ../../mpu6050.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/43898991/mpu6050.o: ../../mpu6050.h  .generated_files/flags/default/7838df0289f5761daec9ae0c3ed5bc35f29c2c79 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/_ext/43898991" 
-	@${RM} ${OBJECTDIR}/_ext/43898991/mpu6050.o.d 
-	@${RM} ${OBJECTDIR}/_ext/43898991/mpu6050.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/_ext/43898991/mpu6050.o.d" -o ${OBJECTDIR}/_ext/43898991/mpu6050.o ../../mpu6050.h    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+${OBJECTDIR}/_ext/1472/nu32dip.o: ../nu32dip.c  .generated_files/flags/default/b028ae57e943b6d1dd6a805d2d064ae0fde4aac6 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
+	@${RM} ${OBJECTDIR}/_ext/1472/nu32dip.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/nu32dip.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/_ext/1472/nu32dip.o.d" -o ${OBJECTDIR}/_ext/1472/nu32dip.o ../nu32dip.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/43898991/nu32dip.o: ../../nu32dip.c  .generated_files/flags/default/ccff7a980f91c8f420eca0415989f07cc78d05ba .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/_ext/43898991" 
-	@${RM} ${OBJECTDIR}/_ext/43898991/nu32dip.o.d 
-	@${RM} ${OBJECTDIR}/_ext/43898991/nu32dip.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/_ext/43898991/nu32dip.o.d" -o ${OBJECTDIR}/_ext/43898991/nu32dip.o ../../nu32dip.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
-	
-${OBJECTDIR}/_ext/43898991/nu32dip.o: ../../nu32dip.h  .generated_files/flags/default/4bb7afd0f23e9e6a956e335fc7fc47fe25d49b45 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/_ext/43898991" 
-	@${RM} ${OBJECTDIR}/_ext/43898991/nu32dip.o.d 
-	@${RM} ${OBJECTDIR}/_ext/43898991/nu32dip.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/_ext/43898991/nu32dip.o.d" -o ${OBJECTDIR}/_ext/43898991/nu32dip.o ../../nu32dip.h    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+${OBJECTDIR}/_ext/1472/i2c_master_noint.o: ../i2c_master_noint.c  .generated_files/flags/default/5a262b9b82705f5c0b118b63f0c074cd8319df68 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
+	@${RM} ${OBJECTDIR}/_ext/1472/i2c_master_noint.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/i2c_master_noint.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/_ext/1472/i2c_master_noint.o.d" -o ${OBJECTDIR}/_ext/1472/i2c_master_noint.o ../i2c_master_noint.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
 else
 ${OBJECTDIR}/_ext/1472/template_hw_7.o: ../template_hw_7.c  .generated_files/flags/default/6aa51e043b2a89d8373fd91a39b143d3aa80156d .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
@@ -170,41 +152,23 @@ ${OBJECTDIR}/_ext/1472/template_hw_7.o: ../template_hw_7.c  .generated_files/fla
 	@${RM} ${OBJECTDIR}/_ext/1472/template_hw_7.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/_ext/1472/template_hw_7.o.d" -o ${OBJECTDIR}/_ext/1472/template_hw_7.o ../template_hw_7.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/43898991/i2c_master_noint.o: ../../i2c_master_noint.c  .generated_files/flags/default/31311a6e064c6d1bf73d4a5afdf41c8e34d55c92 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/_ext/43898991" 
-	@${RM} ${OBJECTDIR}/_ext/43898991/i2c_master_noint.o.d 
-	@${RM} ${OBJECTDIR}/_ext/43898991/i2c_master_noint.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/_ext/43898991/i2c_master_noint.o.d" -o ${OBJECTDIR}/_ext/43898991/i2c_master_noint.o ../../i2c_master_noint.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
-	
-${OBJECTDIR}/_ext/43898991/i2c_master_noint.o: ../../i2c_master_noint.h  .generated_files/flags/default/c2e05a6efa6bcdce06a689fd486357044abb70ef .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/_ext/43898991" 
-	@${RM} ${OBJECTDIR}/_ext/43898991/i2c_master_noint.o.d 
-	@${RM} ${OBJECTDIR}/_ext/43898991/i2c_master_noint.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/_ext/43898991/i2c_master_noint.o.d" -o ${OBJECTDIR}/_ext/43898991/i2c_master_noint.o ../../i2c_master_noint.h    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
-	
 ${OBJECTDIR}/_ext/43898991/mpu6050.o: ../../mpu6050.c  .generated_files/flags/default/dc4b945fd346cc6e0d71b168d1eb06ae3c0b1b .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/_ext/43898991" 
 	@${RM} ${OBJECTDIR}/_ext/43898991/mpu6050.o.d 
 	@${RM} ${OBJECTDIR}/_ext/43898991/mpu6050.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/_ext/43898991/mpu6050.o.d" -o ${OBJECTDIR}/_ext/43898991/mpu6050.o ../../mpu6050.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/43898991/mpu6050.o: ../../mpu6050.h  .generated_files/flags/default/f4dce1e0056a2c82eacc11e49914b331ab8fe93b .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/_ext/43898991" 
-	@${RM} ${OBJECTDIR}/_ext/43898991/mpu6050.o.d 
-	@${RM} ${OBJECTDIR}/_ext/43898991/mpu6050.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/_ext/43898991/mpu6050.o.d" -o ${OBJECTDIR}/_ext/43898991/mpu6050.o ../../mpu6050.h    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+${OBJECTDIR}/_ext/1472/nu32dip.o: ../nu32dip.c  .generated_files/flags/default/5133487524bc109ab30432a18775b9756c590c44 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
+	@${RM} ${OBJECTDIR}/_ext/1472/nu32dip.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/nu32dip.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/_ext/1472/nu32dip.o.d" -o ${OBJECTDIR}/_ext/1472/nu32dip.o ../nu32dip.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/43898991/nu32dip.o: ../../nu32dip.c  .generated_files/flags/default/49373a4e387e9add406c51952a2312ca28e30a1f .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/_ext/43898991" 
-	@${RM} ${OBJECTDIR}/_ext/43898991/nu32dip.o.d 
-	@${RM} ${OBJECTDIR}/_ext/43898991/nu32dip.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/_ext/43898991/nu32dip.o.d" -o ${OBJECTDIR}/_ext/43898991/nu32dip.o ../../nu32dip.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
-	
-${OBJECTDIR}/_ext/43898991/nu32dip.o: ../../nu32dip.h  .generated_files/flags/default/f01558c87cdb05a07e29084a4b3cfe513b285c18 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/_ext/43898991" 
-	@${RM} ${OBJECTDIR}/_ext/43898991/nu32dip.o.d 
-	@${RM} ${OBJECTDIR}/_ext/43898991/nu32dip.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/_ext/43898991/nu32dip.o.d" -o ${OBJECTDIR}/_ext/43898991/nu32dip.o ../../nu32dip.h    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+${OBJECTDIR}/_ext/1472/i2c_master_noint.o: ../i2c_master_noint.c  .generated_files/flags/default/cd7e8403a26412dbfaa3ca4f21aa856ab107cd3d .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
+	@${RM} ${OBJECTDIR}/_ext/1472/i2c_master_noint.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/i2c_master_noint.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/_ext/1472/i2c_master_noint.o.d" -o ${OBJECTDIR}/_ext/1472/i2c_master_noint.o ../i2c_master_noint.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
 endif
 

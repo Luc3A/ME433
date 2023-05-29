@@ -1,7 +1,5 @@
 #include "i2c_master_noint.h"
 #include "mpu6050.h"
-//#include <stdint.h>
-//#include <xc.h>
 
 // Implementation by Dan Lynch
 // Source file for mpu6050.h.
@@ -180,4 +178,3 @@ void write_byte_I2C1(uint8_t dev_addr,
     i2c_master_send(data);          // specify data to write to reg_addr
     i2c_master_stop();              // STOP bit
 }
-
