@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=../../HW7/nu32dip.c ../../HW7/main_HW_10.c ../../ws2812b.c
+SOURCEFILES_QUOTED_IF_SPACED=../../HW7/nu32dip.c ../../hw14_motor_control.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1445232488/nu32dip.o ${OBJECTDIR}/_ext/1445232488/main_HW_10.o ${OBJECTDIR}/_ext/43898991/ws2812b.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1445232488/nu32dip.o.d ${OBJECTDIR}/_ext/1445232488/main_HW_10.o.d ${OBJECTDIR}/_ext/43898991/ws2812b.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1445232488/nu32dip.o ${OBJECTDIR}/_ext/43898991/hw14_motor_control.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1445232488/nu32dip.o.d ${OBJECTDIR}/_ext/43898991/hw14_motor_control.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/1445232488/nu32dip.o ${OBJECTDIR}/_ext/1445232488/main_HW_10.o ${OBJECTDIR}/_ext/43898991/ws2812b.o
+OBJECTFILES=${OBJECTDIR}/_ext/1445232488/nu32dip.o ${OBJECTDIR}/_ext/43898991/hw14_motor_control.o
 
 # Source Files
-SOURCEFILES=../../HW7/nu32dip.c ../../HW7/main_HW_10.c ../../ws2812b.c
+SOURCEFILES=../../HW7/nu32dip.c ../../hw14_motor_control.c
 
 
 
@@ -83,7 +83,7 @@ _/_=\\
 ShExtension=.bat
 Device=PIC32MX170F256B
 ProjectDir="C:\Users\12037\OneDrive - Northwestern University\Documents\GitHub\ME433\HW14\HW10.X"
-ProjectName=HW10
+ProjectName=HW14
 ConfName=default
 ImagePath="dist\default\${IMAGE_TYPE}\HW10.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}"
 ImageDir="dist\default\${IMAGE_TYPE}"
@@ -127,17 +127,11 @@ ${OBJECTDIR}/_ext/1445232488/nu32dip.o: ../../HW7/nu32dip.c  .generated_files/fl
 	@${RM} ${OBJECTDIR}/_ext/1445232488/nu32dip.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -fno-common -MP -MMD -MF "${OBJECTDIR}/_ext/1445232488/nu32dip.o.d" -o ${OBJECTDIR}/_ext/1445232488/nu32dip.o ../../HW7/nu32dip.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/1445232488/main_HW_10.o: ../../HW7/main_HW_10.c  .generated_files/flags/default/4c33aadcbbf447085eee5ad5cdb57c03c8037e3 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/_ext/1445232488" 
-	@${RM} ${OBJECTDIR}/_ext/1445232488/main_HW_10.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1445232488/main_HW_10.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -fno-common -MP -MMD -MF "${OBJECTDIR}/_ext/1445232488/main_HW_10.o.d" -o ${OBJECTDIR}/_ext/1445232488/main_HW_10.o ../../HW7/main_HW_10.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
-	
-${OBJECTDIR}/_ext/43898991/ws2812b.o: ../../ws2812b.c  .generated_files/flags/default/948bd0d95aebfdb237b0257a7e59da36a47de8f4 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/_ext/43898991/hw14_motor_control.o: ../../hw14_motor_control.c  .generated_files/flags/default/4bb7b157030d2ae43c84b8414eb69f9a81865c75 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/_ext/43898991" 
-	@${RM} ${OBJECTDIR}/_ext/43898991/ws2812b.o.d 
-	@${RM} ${OBJECTDIR}/_ext/43898991/ws2812b.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -fno-common -MP -MMD -MF "${OBJECTDIR}/_ext/43898991/ws2812b.o.d" -o ${OBJECTDIR}/_ext/43898991/ws2812b.o ../../ws2812b.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	@${RM} ${OBJECTDIR}/_ext/43898991/hw14_motor_control.o.d 
+	@${RM} ${OBJECTDIR}/_ext/43898991/hw14_motor_control.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -fno-common -MP -MMD -MF "${OBJECTDIR}/_ext/43898991/hw14_motor_control.o.d" -o ${OBJECTDIR}/_ext/43898991/hw14_motor_control.o ../../hw14_motor_control.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
 else
 ${OBJECTDIR}/_ext/1445232488/nu32dip.o: ../../HW7/nu32dip.c  .generated_files/flags/default/f6513746a4082bdfc8968dfbb845a978229404dc .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
@@ -146,17 +140,11 @@ ${OBJECTDIR}/_ext/1445232488/nu32dip.o: ../../HW7/nu32dip.c  .generated_files/fl
 	@${RM} ${OBJECTDIR}/_ext/1445232488/nu32dip.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -fno-common -MP -MMD -MF "${OBJECTDIR}/_ext/1445232488/nu32dip.o.d" -o ${OBJECTDIR}/_ext/1445232488/nu32dip.o ../../HW7/nu32dip.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/1445232488/main_HW_10.o: ../../HW7/main_HW_10.c  .generated_files/flags/default/8522649c0107416e7d0955224d4880966c1ea228 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/_ext/1445232488" 
-	@${RM} ${OBJECTDIR}/_ext/1445232488/main_HW_10.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1445232488/main_HW_10.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -fno-common -MP -MMD -MF "${OBJECTDIR}/_ext/1445232488/main_HW_10.o.d" -o ${OBJECTDIR}/_ext/1445232488/main_HW_10.o ../../HW7/main_HW_10.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
-	
-${OBJECTDIR}/_ext/43898991/ws2812b.o: ../../ws2812b.c  .generated_files/flags/default/d7605c4d0fce68b19bb48f1c023308d6ca682541 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/_ext/43898991/hw14_motor_control.o: ../../hw14_motor_control.c  .generated_files/flags/default/fd4e2c14497a7019821210e701df1951f3aa4920 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/_ext/43898991" 
-	@${RM} ${OBJECTDIR}/_ext/43898991/ws2812b.o.d 
-	@${RM} ${OBJECTDIR}/_ext/43898991/ws2812b.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -fno-common -MP -MMD -MF "${OBJECTDIR}/_ext/43898991/ws2812b.o.d" -o ${OBJECTDIR}/_ext/43898991/ws2812b.o ../../ws2812b.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	@${RM} ${OBJECTDIR}/_ext/43898991/hw14_motor_control.o.d 
+	@${RM} ${OBJECTDIR}/_ext/43898991/hw14_motor_control.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -fno-common -MP -MMD -MF "${OBJECTDIR}/_ext/43898991/hw14_motor_control.o.d" -o ${OBJECTDIR}/_ext/43898991/hw14_motor_control.o ../../hw14_motor_control.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
 endif
 
