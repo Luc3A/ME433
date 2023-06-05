@@ -1,54 +1,37 @@
 #include "nu32dip.h" // constants, functions for startup and UART
-#include "i2c_master_noint.h"
-#include "mpu6050.h"
+
 #include <stdio.h>
 
 void blink(int, int); // blink the LEDs function
 
 int main(void) {
     NU32DIP_Startup(); // cache on, interrupts on, LED/button init, UART init
-    init_mpu6050();
-	
-	// char array for the raw data
-    unsigned char d[14];
-	// floats to store the data
-    float ax, ay, az, gx, gy, gz;
-	
-	// read whoami
-    unsigned char who;
-    who = whoami();
     
-	// print whoami
     char m[100];
-    sprintf(m, "0x%X\r\n", who);
-    
-	// if whoami is not 0x68, stuck in loop with LEDs on
-    if(who != 0x68)
-    {
-        blink(1,5);
-    }
-    
+    T2CONbits.TCKPS = 2;     // Timer2 prescaler N=4 (1:4)
+    PR2 = 7499;              // period = (PR2+1) * N * (1/48000000) = 6 kHz
+    TMR2 = 0;                // initial TMR2 count is 0
+    OC1CONbits.OCM = 0b110;  // PWM mode without fault pin; other OC1CON bits are defaults
+    OC1CONbits.OCTSEL = 0;   // Use timer2
+    OC1RS = 3750;             // duty cycle = OC1RS/(PR2+1) = 25%
+    OC1R = 3750;              // initialize before turning OC1 on; afterward it is read-only
+    T2CONbits.ON = 1;        // turn on Timer2
+    OC1CONbits.ON = 1;       // turn on OC1
+	
+    //LATBbits.LATB15 = 0;
+    //RPB15Rbits.RPB15R = 0b0101; //pin 15 is output compare :D 
     
 	// wait to print until you get a newline
-    NU32DIP_ReadUART1(m,100);
+    //NU32DIP_ReadUART1(m,100);
 
     while (1) {
 		// use core timer for exactly 100Hz loop
         _CP0_SET_COUNT(0);
-        blink(1, 5);
-
-        // read IMU
-        burst_read_mpu6050(d);
-        
-		// convert data
-        ax = conv_xXL(d);
-        
-        // print out the data
-        sprintf(m,"%f\r\n", ax);
-        NU32DIP_WriteUART1(m);
+        blink(5,500);
 
         while (_CP0_GET_COUNT() < 48000000 / 2 / 100) {
         }
+        
     }
 }
 

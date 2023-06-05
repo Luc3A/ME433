@@ -3,7 +3,8 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>HW14</name>
+            <name>HW10</name>
+            <name>HW10</name>
             <name>HW10</name>
             <name>HW8</name>
             <name>HW7</name>
@@ -18,7 +19,6 @@
                 <sourceRootElem>../../../ME433_2023/template</sourceRootElem>
                 <sourceRootElem>../../../../../OneDrive - Northwestern University/Documents/GitHub/ME433/HW7</sourceRootElem>
                 <sourceRootElem>../..</sourceRootElem>
-                <sourceRootElem>../../../../../../PIC/Final</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>
