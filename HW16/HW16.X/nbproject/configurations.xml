@@ -15,7 +15,9 @@
                    displayName="Source Files"
                    projectFiles="true">
       <itemPath>../../HW7/nu32dip.c</itemPath>
-      <itemPath>../../main_hw_14.c</itemPath>
+      <itemPath>../../hw16_main.c</itemPath>
+      <itemPath>../uart2.c</itemPath>
+      <itemPath>../uart2.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -27,7 +29,6 @@
     <Elem>../../../ME433_2023/template</Elem>
     <Elem>../../../../../OneDrive - Northwestern University/Documents/GitHub/ME433/HW7</Elem>
     <Elem>../..</Elem>
-    <Elem>../../../../../../PIC/Final</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
