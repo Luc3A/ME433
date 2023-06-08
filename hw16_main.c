@@ -13,7 +13,7 @@ int main(void) {
     
     
     // after NU32DIP_startup()
-    UART2_Startup();
+    // UART2_Startup();
 
     // VM should be connected to 3.3 V (or 5V)
     // MD should be high
@@ -35,7 +35,7 @@ int main(void) {
     OC2CONbits.ON = 0; 
     
     T2CONbits.TCKPS = 4;     // Timer2 prescaler N=4 (1:4)
-    PR2 = 59999;             //50Hz
+    PR2 = 1999;             //50Hz
     TMR2 = 0;                // initial TMR2 count is 0
     OC1CONbits.OCM = 0b110;  // PWM mode without fault pin; other OC1CON bits are defaults
     OC1CONbits.OCTSEL = 0;   // Use timer2
@@ -43,11 +43,11 @@ int main(void) {
     OC2CONbits.OCM = 0b110;
     OC2CONbits.OCTSEL = 0;
     
-    OC1RS = 5000;            //duty cycle =   // duty cycle = OC1RS/(PR2+1) = 25%
-    OC1R = 5000;              // initialize before turning OC1 on; afterward it is read-only
+    OC1RS = 1000;            //duty cycle =   // duty cycle = OC1RS/(PR2+1) = 25%
+    OC1R = 1000;              // initialize before turning OC1 on; afterward it is read-only
     
-    OC2RS = 5000; 
-    OC2R = 5000;
+    OC2RS = 1000; 
+    OC2R = 1000;
    
     
     T2CONbits.ON = 1;        // turn on Timer2
@@ -73,7 +73,7 @@ int main(void) {
     // in while(1)
     int com = 0;
     // uart2_flag() is 1 when uart2 has rx a message and sprintf'd it into a value
-    /*if(get_uart2_flag()){
+    if(get_uart2_flag()){
         set_uart2_flag(0); // set the flag to 0 to be ready for the next message
         com = get_uart2_value();
         
@@ -81,11 +81,11 @@ int main(void) {
         {
             OC1CONbits.ON = 0;
             OC1CONbits.ON = 0;
-            OC1RS = 2500;            //duty cycle =   // duty cycle = OC1RS/(PR2+1) = 25%
-            OC1R = 2500;              // initialize before turning OC1 on; afterward it is read-only
+            OC1RS = 1500;            //duty cycle =   // duty cycle = OC1RS/(PR2+1) = 25%
+            OC1R = 1500;              // initialize before turning OC1 on; afterward it is read-only
     
-            OC2RS = 5000;
-            OC2R = 5000; 
+            OC2RS = 1000;
+            OC2R = 1000; 
             OC1CONbits.ON = 1;
             OC2CONbits.ON = 1;
         }
@@ -95,11 +95,11 @@ int main(void) {
             OC1CONbits.ON = 0;
             OC1CONbits.ON = 0;
             
-            OC2RS = 2500;            //duty cycle =   // duty cycle = OC1RS/(PR2+1) = 25%
-            OC2R = 2500;              // initialize before turning OC1 on; afterward it is read-only
+            OC2RS = 1500;            //duty cycle =   // duty cycle = OC1RS/(PR2+1) = 25%
+            OC2R = 1500;              // initialize before turning OC1 on; afterward it is read-only
     
-            OC2RS = 5000;
-            OC2R = 5000; 
+            OC2RS = 1000;
+            OC2R = 1000; 
             
             OC1CONbits.ON = 1;
             OC2CONbits.ON = 1;
@@ -110,18 +110,18 @@ int main(void) {
             OC1CONbits.ON = 0;
             OC1CONbits.ON = 0;
             
-            OC2RS = 5000;            //duty cycle =   // duty cycle = OC1RS/(PR2+1) = 25%
-            OC2R = 5000;              // initialize before turning OC1 on; afterward it is read-only
+            OC2RS = 1000;            //duty cycle =   // duty cycle = OC1RS/(PR2+1) = 25%
+            OC2R = 1000;              // initialize before turning OC1 on; afterward it is read-only
     
-            OC2RS = 5000;
-            OC2R = 5000; 
+            OC2RS = 1000;
+            OC2R = 1000; 
             
             OC1CONbits.ON = 1;
             OC2CONbits.ON = 1;
         }
         sprintf(message2,"%d\r\n",com);
         NU32DIP_WriteUART1(message2);
-    }*/
+    }
   }
 }
 
